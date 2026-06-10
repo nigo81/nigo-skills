@@ -11,6 +11,7 @@
 | **[chen-yiwei-perspective](./chen-yiwei-perspective)** | 陈奕蔚（会计视野论坛版主）的会计准则实务判断框架，20+ 年答疑精华 |
 | **[tianchuan-perspective](./tianchuan-perspective)** | 田川（信永中和高级经理）的审计方法论与专业判断逻辑 |
 | **[a-stock-financial](./a-stock-financial)** | A股上市公司三大报表一键查询与 Excel 导出（同花顺数据源，免费） |
+| **[local-rag](./local-rag)** | 本地向量知识库，支持多项目隔离、语义检索、中英文文档解析（SiliconFlow 免费额度） |
 
 ## 安装方式
 
@@ -67,11 +68,16 @@ cp nigo-skills/chen-yiwei-perspective/SKILL.md your-project/.cursor/rules/chen-y
 > "帮我查一下贵州茅台近3年的利润表，导出 Excel"
 > → 自动调用 AkShare 查询并生成 Excel 文件
 
+**制度条款检索：**
+> "把目标公司的制度文件建库，搜索消防安全管理相关条款"
+> → 自动解析 Word/PDF/Markdown，切片入库，语义检索 + rerank 精排
+
 ## 谁适合用
 
 - 审计助理 ~ 项目经理 ~ 合伙人：快速获取准则依据和实务判断
 - 财务人员：查询上市公司财报，做同行对比分析
 - 会计专业学生：以专家视角理解准则条文背后的实务逻辑
+- 审计项目组：建立客户制度文档知识库，快速检索匹配条款
 
 ## 许可
 

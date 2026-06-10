@@ -1,0 +1,26 @@
+#!/usr/bin/env python3
+"""local-rag CLI 入口脚本
+
+用法：
+    local-rag setup
+    local-rag create my-project
+    local-rag ingest my-project /path/to/docs
+    local-rag search my-project "查询内容" --rerank
+
+可放在 PATH 中任意位置，自动定位 skill 目录。
+"""
+import os
+import sys
+
+# 定位 skill 目录（脚本所在目录的上两级）
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+SKILL_DIR = os.path.dirname(SCRIPT_DIR)  # bin/ → local-rag/
+
+# 将 skill 目录加入 Python 路径
+sys.path.insert(0, SKILL_DIR)
+
+# 设置包名为 src，让相对导入正常工作
+from src.cli import main
+
+if __name__ == "__main__":
+    main()

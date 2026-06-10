@@ -1,0 +1,40 @@
+# Local RAG 配置文件
+# 复制为 config.yaml 并根据需要修改
+#
+# ⚠️ API Key 安全：不要把 API Key 直接写在文件里！
+#    请设置环境变量 SILICONFLOW_API_KEY，config.yaml 中用 ${SILICONFLOW_API_KEY} 引用。
+#    环境变量设置方法：
+#      macOS/Linux: echo 'export SILICONFLOW_API_KEY="sk-xxx"' >> ~/.zshrc && source ~/.zshrc
+#      或临时设置: SILICONFLOW_API_KEY=sk-xxx python3 -m src ...
+
+# Embedding 配置
+embedding:
+  provider: siliconflow           # siliconflow | ollama | openai
+  model: BAAI/bge-m3              # SiliconFlow 默认模型（免费）
+  api_key: ${SILICONFLOW_API_KEY} # 从环境变量读取，请勿直接填写 key
+  base_url: https://api.siliconflow.cn/v1
+
+# Reranker 配置
+reranker:
+  provider: siliconflow           # siliconflow | ollama | local | none
+  model: BAAI/bge-reranker-v2-m3  # SiliconFlow 默认模型（免费）
+  api_key: ${SILICONFLOW_API_KEY} # 从环境变量读取，请勿直接填写 key
+
+# 切片配置
+chunking:
+  strategy: chinese_regulation    # chinese_regulation | generic
+  chunk_size: 800
+  chunk_overlap: 0.15
+  min_chunk_size: 50
+
+# 存储
+# data_dir 不设置则自动选择平台默认路径：
+#   macOS: ~/Library/Application Support/local-rag
+#   Windows: %LOCALAPPDATA%\local-rag
+#   Linux: ~/.local/share/local-rag
+storage:
+  # data_dir: ~/.local/share/local-rag    # 取消注释可自定义路径
+
+# 日志
+logging:
+  level: INFO
