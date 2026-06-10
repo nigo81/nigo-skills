@@ -11,6 +11,7 @@
 | **[chen-yiwei-perspective](./chen-yiwei-perspective)** | 陈奕蔚（会计视野论坛版主）的会计准则实务判断框架，20+ 年答疑精华 |
 | **[tianchuan-perspective](./tianchuan-perspective)** | 田川（信永中和高级经理）的审计方法论与专业判断逻辑 |
 | **[a-stock-financial](./a-stock-financial)** | A股上市公司三大报表一键查询与 Excel 导出（同花顺数据源，免费） |
+| **[chenyiwei-bbs](./chenyiwei-bbs)** | 陈版主（会计视野论坛）实务问答实时检索，自动查询最新准则解答 |
 | **[local-rag](./local-rag)** | 本地向量知识库，支持多项目隔离、语义检索、中英文文档解析（SiliconFlow 免费额度） |
 
 ## 安装方式
@@ -67,6 +68,10 @@ cp nigo-skills/chen-yiwei-perspective/SKILL.md your-project/.cursor/rules/chen-y
 **A股财报查询：**
 > "帮我查一下贵州茅台近3年的利润表，导出 Excel"
 > → 自动调用 AkShare 查询并生成 Excel 文件
+
+**陈版主问答检索：**
+> "政府补助与收益相关和与资产相关如何区分？陈版主怎么说的？"
+> → 自动查询会计视野论坛陈奕蔚的最新实务解答
 
 **制度条款检索：**
 > "把目标公司的制度文件建库，搜索消防安全管理相关条款"
