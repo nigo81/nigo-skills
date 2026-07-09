@@ -358,3 +358,9 @@ description: |
 
 > 本Skill由 [女娲 · Skill造人术](https://github.com/alchaincyf/nuwa-skill) 生成
 > 创建者：[花叔](https://x.com/AlchainHust)
+
+
+---
+
+> 作者：nigo
+> 微信公众号：逆行的狗

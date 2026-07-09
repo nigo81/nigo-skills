@@ -1,0 +1,16 @@
+# 核心依赖（必装，~50MB）
+chromadb>=0.4.0
+chonkie>=0.4.0
+python-docx>=0.8.0
+PyMuPDF>=1.23.0
+pyyaml>=6.0
+requests>=2.28.0
+
+# MCP Server（可选）
+# pip install fastmcp
+# fastmcp>=0.1.0
+
+# 本地 Reranker（极少数离线场景，~3GB）
+# pip install torch transformers
+# torch>=2.0.0
+# transformers>=4.30.0
