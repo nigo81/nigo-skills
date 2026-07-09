@@ -11,6 +11,7 @@
 | 技能 | 一句话说明 |
 |------|-----------|
 | **[chen-yiwei-perspective](./chen-yiwei-perspective)** | 陈奕蔚（会计视野论坛版主、中审众环合伙人）的会计准则实务判断框架，24 年答疑精华 |
+| **[chenyiwei-bbs](./chenyiwei-bbs)** | 陈版主实务问答实时检索（curl 公开 API，无需 API Key/MCP） |
 | **[tianchuan-perspective](./tianchuan-perspective)** | 田川（信永中和高级经理）的审计方法论与"业务优先"专业判断逻辑 |
 | **[shaoniannu-perspective](./shaoniannu-perspective)** | 少年怒（审计小哥）的实务派思维，241 篇文章 + 千条评论提炼 |
 

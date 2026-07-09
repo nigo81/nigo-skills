@@ -10,9 +10,6 @@ description: 本地向量知识库，支持按项目管理文档（docx/doc/pdf/
 > **作者**: nigo（公众号「逆行的狗」）
 > 面向财务/审计从业者的 AI 效率工具，有任何问题可关注公众号反馈。
 
-> **作者**: nigo（公众号「逆行的狗」）
-> 面向财务/审计从业者的 AI 效率工具，有任何问题可关注公众号反馈。
-
 ## 技术栈
 
 - 切片：Chonkie RecursiveChunker + OverlapRefinery（15% overlap）
@@ -103,9 +100,7 @@ python3 ~/.claude/skills/local-rag/mcp_server.py
 
 > ⚠️ **API Key 安全**: 不要把 API Key 直接写在 config.yaml 里！请设置环境变量 `SILICONFLOW_API_KEY`，config.yaml 中用 `${SILICONFLOW_API_KEY}` 引用。
 
-> ⚠️ **API Key 安全**: 不要把 API Key 直接写在 config.yaml 里！请设置环境变量 `SILICONFLOW_API_KEY`，config.yaml 中用 `${SILICONFLOW_API_KEY}` 引用。
-
-环境变量 `SILICONFLOW_API_KEY` 设置硅基流动 Key 即可使用默认配置。如果没有 Key，请先到 [硅基流动](https://cloud.siliconflow.cn) 免费注册并创建 API Key。如果没有 Key，请先到 [硅基流动](https://cloud.siliconflow.cn) 免费注册并创建 API Key。
+环境变量 `SILICONFLOW_API_KEY` 设置硅基流动 Key 即可使用默认配置。如果没有 Key，请先到 [硅基流动](https://cloud.siliconflow.cn) 免费注册并创建 API Key。
 
 ### API Key 查找顺序
 
