@@ -3,6 +3,9 @@
 __MACOSX/
 Thumbs.db
 
+# 内部协作记忆（不公开）
+AGENTS.md
+
 # Python 缓存与编译产物
 __pycache__/
 *.py[cod]
