@@ -29,6 +29,7 @@
 |------|-----------|
 | **[audit-report-checker](./audit-report-checker)** | 检查审计报告勾稽/加总/格式错误，输出 7 sheet Excel + Markdown 复核报告（算术全走代码） |
 | **[related-party-identification](./related-party-identification)** | 基于工商数据自动识别"隐形关联方"，八大维度比对，对齐证监会处罚案例规则 |
+| **[flowchart-generator](./flowchart-generator)** | AI 驱动的内控流程图绘制工具，自然语言描述自动生成标准泳道流程图（.drawio/PNG/VSDX/SVG） |
 | **[local-rag](./local-rag)** | 本地向量知识库，按项目管理制度文档，语义检索条款（硅基流动免费 API，零安装） |
 
 ## 安装方式

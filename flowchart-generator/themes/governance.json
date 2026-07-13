@@ -1,0 +1,107 @@
+{
+  "meta": {
+    "name": "内控搭建",
+    "description": "对齐人工绘制风格：浅蓝标题栏/泳道头，红色开始结束，所有内容节点白底黑框"
+  },
+  "layout": {
+    "swimlane_width": 280,
+    "swimlane_header_height": 40,
+    "frame_top_height": 40,
+    "frame_left_width": 40,
+    "node_width": 120,
+    "role_height": 30,
+    "step_height": 40,
+    "doc_height": 40,
+    "decision_height": 80,
+    "y_start_offset": 140,
+    "y_gap": 100
+  },
+  "colors": {
+    "layout_bar": {
+      "fill": "#b4bff5",
+      "stroke": "#000000"
+    },
+    "swimlane_header": {
+      "fill": "#b4bff5",
+      "stroke": "#000000"
+    },
+    "swimlane_body": {
+      "fill": "#FFFFFF",
+      "stroke": "#000000"
+    },
+    "start_end": {
+      "fill": "#d24a4a",
+      "stroke": "#000000"
+    },
+    "node_role": {
+      "fill": "#FFFFFF",
+      "stroke": "#000000"
+    },
+    "node_step": {
+      "fill": "#FFFFFF",
+      "stroke": "#000000"
+    },
+    "node_doc": {
+      "fill": "#FFFFFF",
+      "stroke": "#000000"
+    },
+    "decision": {
+      "fill": "#FFFFFF",
+      "stroke": "#000000"
+    },
+    "edge": {
+      "stroke": "#000000"
+    }
+  },
+  "fonts": {
+    "layout_bar": {
+      "size": 16,
+      "family": "Arial",
+      "color": "#000000",
+      "style": "bold"
+    },
+    "swimlane_header": {
+      "size": 14,
+      "family": "Arial",
+      "color": "#000000",
+      "style": "normal"
+    },
+    "start_end": {
+      "size": 14,
+      "family": "Arial",
+      "color": "#FFFFFF",
+      "style": "bold"
+    },
+    "node_role": {
+      "size": 12,
+      "family": "Arial",
+      "color": "#000000",
+      "style": "normal"
+    },
+    "node_step": {
+      "size": 12,
+      "family": "Arial",
+      "color": "#000000",
+      "style": "normal"
+    },
+    "node_doc": {
+      "size": 10,
+      "family": "Arial",
+      "color": "#000000",
+      "style": "normal"
+    },
+    "decision": {
+      "size": 12,
+      "family": "Arial",
+      "color": "#000000",
+      "style": "normal"
+    }
+  },
+  "shapes": {
+    "start_end": "rounded"
+  },
+  "edges": {
+    "dashed_for_negative": true,
+    "negative_keywords": ["否", "不符合", "不", "未", "fail", "驳回"]
+  }
+}
