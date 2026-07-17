@@ -14,7 +14,7 @@
     "doc_height": 40,
     "decision_height": 80,
     "y_start_offset": 140,
-    "y_gap": 100
+    "y_gap": 50
   },
   "colors": {
     "layout_bar": {

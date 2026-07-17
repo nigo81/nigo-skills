@@ -25,7 +25,7 @@ class FlowchartValidator:
     VALID_TYPES = {'process', 'decision'}
 
     # 必需的字段
-    REQUIRED_FIELDS = {'id', 'step', 'type', 'swimlane_role'}
+    REQUIRED_FIELDS = {'id', 'step', 'type', 'swimlane_role', 'node_role'}
 
     def __init__(self):
         """初始化校验器"""
@@ -156,7 +156,7 @@ class FlowchartValidator:
 
     def _check_orphan_next_steps(self, nodes_data: List[Dict]) -> List[str]:
         """
-        检查孤儿下一步（None 或空字符串）
+        检查孤儿下一步（id 为 None 或空字符串）
 
         Returns:
             List[str]: 错误消息列表
@@ -171,10 +171,13 @@ class FlowchartValidator:
                 continue
 
             for next_step in next_steps:
-                if next_step is None:
-                    errors.append(f"节点 '{node_id}' 的 next_steps 包含 None")
-                elif isinstance(next_step, str) and next_step.strip() == '':
-                    errors.append(f"节点 '{node_id}' 的 next_steps 包含空字符串")
+                if not isinstance(next_step, dict):
+                    continue
+                target_id = next_step.get('id')
+                if target_id is None:
+                    errors.append(f"节点 '{node_id}' 的 next_steps 包含 id 为 None 的项")
+                elif isinstance(target_id, str) and target_id.strip() == '':
+                    errors.append(f"节点 '{node_id}' 的 next_steps 包含空 id")
 
         return errors
 

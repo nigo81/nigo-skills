@@ -31,3 +31,6 @@ config.local.yaml
 .idea/
 .vscode/
 *.swp
+
+# 构建产物 / 打包文件
+*.zip

@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+*.drawio.bak
+*.png.bak
+*.svg.bak
+.vsdx.bak

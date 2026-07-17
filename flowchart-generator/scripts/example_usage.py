@@ -4,9 +4,14 @@
 制作人：nigo
 微信公众号：逆行的狗
 """
+import sys
+from pathlib import Path
 
-from engine.style_manager import StyleManager
-from engine.flowchart_builder import FlowchartBuilder
+# 添加 skill 根目录到 Python 路径
+skill_root = Path(__file__).parent.parent
+sys.path.insert(0, str(skill_root))
+
+from engine import StyleManager, FlowchartBuilder, Renderer
 
 # 示例节点数据（模拟AI解析结果）
 nodes_data_example = [
@@ -111,15 +116,28 @@ save_path = style_manager.save_as_theme(
 if save_path:
     print(f"✓ 主题已保存: {save_path}")
 
-# 总结
-print("\n" + "="*60)
-print("✅ 所有测试通过！")
-print("="*60)
-print("\n核心验证：")
-print("✓ 样式管理器：加载/覆盖/保存功能正常")
-print("✓ 布局算法：网格化分层 + 路径碰撞检测")
-print("✓ 连线计算：同行/异行 + 虚线处理")
-print("✓ XML生成：完整.drawio格式")
-print("\n输出文件：")
-print(f"  {output_path}")
-print(f"\n可导入 draw.io 打开：https://app.diagrams.net/")
+# 步骤5：导出为图片
+print("\n[步骤5] 导出为图片...")
+renderer = Renderer()
+
+# PNG 导出（高清）
+renderer.export_to_png(Path(output_path), Path("example_flowchart.png"), scale=2.0)
+print("✓ PNG 已导出")
+
+# SVG 导出（矢量）
+renderer.export_to_svg(Path(output_path), Path("example_flowchart.svg"))
+print("✓ SVG 已导出")
+
+# VSDX 导出（仅当版本兼容时）
+if renderer._is_version_compatible_with_vsdx():
+    try:
+        renderer.export_to_vsdx(
+            Path(output_path),
+            Path("example_flowchart.vsdx"),
+            auto_install=False  # 不自动安装，避免交互式询问
+        )
+        print("✓ VSDX 已导出")
+    except Exception as e:
+        print(f"⚠ VSDX 导出失败: {e}")
+else:
+    print("⚠ VSDX 导出跳过（当前版本不支持，设置 auto_install=True 可自动安装）")

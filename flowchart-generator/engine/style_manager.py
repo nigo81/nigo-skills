@@ -141,7 +141,7 @@ class StyleManager:
                 'doc_height': 40,
                 'decision_height': 60,
                 'y_start_offset': 140,
-                'y_gap': 100
+                'y_gap': 50
             },
             'colors': {
                 'layout_bar': {'fill': '#b4bff5', 'stroke': '#000000'},

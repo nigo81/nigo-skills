@@ -3,6 +3,7 @@ Flowchart Builder - 流程图构建器
 复用布局算法，样式从 StyleManager 读取
 """
 import html
+import copy
 from typing import List, Dict, Callable
 from .style_manager import StyleManager
 from .validator import FlowchartValidator
@@ -100,8 +101,8 @@ def build_node_step_decision_style(builder: 'FlowchartBuilder', **overrides) -> 
     font = builder.style_manager.get_font_config('decision')
     return (
         f"fillColor={fill};gradientColor=none;"
-        f"shape=mxgraph.flowchart.decision;strokeColor={stroke};spacingTop=-1;spacingBottom=-1;"
-        f"spacingLeft=-1;spacingRight=-1;"
+        f"shape=mxgraph.flowchart.decision;strokeColor={stroke};strokeWidth=1;"
+        f"spacingTop=-1;spacingBottom=-1;spacingLeft=-1;spacingRight=-1;"
         f"points=[[0,0.5,0],[1,0.5,0],[0.5,0,0],[0.5,1,0],[0.5,0.5,0]];"
         f"labelBackgroundColor=none;rounded=0;html=1;whiteSpace=wrap;"
         f"fontSize={font['size']};fontStyle=1;"
@@ -252,7 +253,8 @@ class FlowchartBuilder:
     def __init__(self, style_manager: StyleManager, sheet_name: str, nodes_data: List[Dict]):
         self.style_manager = style_manager
         self.sheet_name = sheet_name
-        self.nodes_data = nodes_data
+        # 深拷贝避免污染调用者的 nodes_data
+        self.nodes_data = copy.deepcopy(nodes_data)
 
         # 预处理数据：确保每个节点都有 next_step_ids
         for node in self.nodes_data:
@@ -424,7 +426,8 @@ class FlowchartBuilder:
 
             current_y += (row_heights[row_idx] + self.Y_GAP)
 
-        self.total_content_height = max(current_y + 150, 1169)
+        # 动态计算高度，仅保留少量底部边距（80px）用于结束节点
+        self.total_content_height = current_y + 80
         self.node_positions['end'] = current_y
 
     def _build_style(self, style_type: str, **overrides) -> str:

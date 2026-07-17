@@ -34,7 +34,7 @@ engine/
 │   └── delete_theme()          # 删除自定义主题
 ├── renderer.py             # 渲染器
 │   ├── export_to_png()         # PNG（支持 scale 高清）
-│   ├── export_to_vsd()         # Visio .vsdx
+│   ├── export_to_vsdx()        # Visio .vsdx
 │   └── export_to_svg()         # SVG
 ├── validator.py            # 结构校验器
 │   └── FlowchartValidator      # 悬空连线/重复ID/空节点/孤立节点/循环引用/孤儿下一步
