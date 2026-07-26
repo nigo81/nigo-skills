@@ -39,6 +39,12 @@ nigo（公众号：逆行的狗），公众号「逆行的狗」，专注审计�
 | **[flowchart-generator](./flowchart-generator)** | AI 驱动的内控流程图绘制工具，自然语言描述自动生成标准泳道流程图（.drawio/PNG/VSDX/SVG） |
 | **[local-rag](./local-rag)** | 本地向量知识库，按项目管理制度文档，语义检索条款（硅基流动免费 API，零安装） |
 
+### 效率工具类（开发提效）
+
+| 技能 | 一句话说明 |
+|------|-----------|
+| **[opencode-session-visualizer](./opencode-session-visualizer)** | 将 OpenCode 会话从本地数据库导出为可视化 HTML 网页（含压缩前完整对话，可删除/截断/导出） |
+
 ## 安装方式
 
 ### 方式一：告诉 AI 直接安装（推荐）
