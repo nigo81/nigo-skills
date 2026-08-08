@@ -4,6 +4,10 @@ description: 检查审计报告（财务报表 + 附注），发现勾稽错误�
 metadata:
   author: nigo
   version: "1.0.0"
+slug: nigo-audit-report-checker
+displayName: 审计报告复核工具
+summary: 检查审计报告（财务报表+附注），发现勾稽错误、加总错误、文本格式问题，支持 Word/PDF/扫描件，输出 7 sheet Excel + Markdown 复核报告。
+license: MIT
 ---
 
 # 审计报告核查

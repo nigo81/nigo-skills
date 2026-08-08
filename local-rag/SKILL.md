@@ -1,6 +1,11 @@
 ---
 name: local-rag
 description: 本地向量知识库，支持按项目管理文档（docx/doc/pdf/md），语义检索。默认用硅基流动免费 API，零模型安装即可使用。支持多项目隔离、中文制度文档专用切片、Embedding+Rerank 两阶段检索。触发词：知识库、向量检索、RAG、制度检索、文档入库、语义搜索、local rag、搜制度、查条款、文档检索、从文档中搜、语义匹配。即使用户只是说"帮我从这些文件里找到关于XX的规定"或"对比两份制度的差异"，也应使用本 skill。
+slug: nigo-local-rag
+displayName: 本地向量知识库
+version: 1.0.0
+summary: 本地向量知识库，支持按项目管理文档（docx/doc/pdf/md），语义检索，默认用硅基流动免费 API，支持中文制度文档专用切片和 Embedding+Rerank 两阶段检索。
+license: MIT
 ---
 
 # 本地 RAG 知识库

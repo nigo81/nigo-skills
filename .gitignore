@@ -34,3 +34,6 @@ config.local.yaml
 
 # 构建产物 / 打包文件
 *.zip
+
+# playwright-mcp 临时产物
+.playwright-mcp/

@@ -9,6 +9,11 @@ description: >
   关联方尽调、审计关联方、related party、关联方核查底稿 时使用。
   即使用户只说"查一下这几家公司之间有没有关联""帮我看下这批客户供应商的工商数据""这公司是不是空壳"
   "审计要核查关联方"也应触发。配合 cicpa-company-query skill 取数，规则集对齐证监会/财政部近年处罚案例。
+slug: nigo-related-party-identification
+displayName: 关联方识别核查工具
+version: 1.0.0
+summary: 基于工商数据自动识别"隐形关联方"的审计核查工具，比对地址/电话/股权穿透/担保链等八大维度，输出多 sheet Excel 核查报告。
+license: MIT
 ---
 
 # 关联方核查 / 隐形关联方识别

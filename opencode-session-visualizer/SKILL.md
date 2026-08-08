@@ -10,6 +10,11 @@ description: >
   opencode 会话导出、完整对话记录、删除对话、清理会话。
   当用户提到任何与会话导出、可视化、分享、完整记录查看相关的需求时都应使用此 skill。
   即使用户只说"帮我看下之前那个对话"或"导出这个会话"也应触发。
+slug: nigo-opencode-session-visualizer
+displayName: OpenCode会话可视化
+version: 1.0.0
+summary: 将 OpenCode 会话导出为可视化 HTML 网页，复刻官方 share 页面暗色主题，从本地 SQLite 提取完整对话数据含压缩前消息。
+license: MIT
 ---
 
 # OpenCode 会话可视化

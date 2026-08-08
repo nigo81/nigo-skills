@@ -14,6 +14,11 @@ triggers:
   - 季报
   - 导出财报
   - 导出Excel
+slug: nigo-a-stock-financial
+displayName: A股财报查询工具
+version: 1.0.0
+summary: A股上市公司财务报表查询与导出，支持资产负债表、利润表、现金流量表及财务摘要，按报告期/年度/单季度查询，可导出 Excel。
+license: MIT
 ---
 
 # A股上市公司财务报表查询

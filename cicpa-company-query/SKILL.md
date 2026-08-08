@@ -7,6 +7,11 @@ description: >
   Full export (--browser-export) triggers on 全量, 完整维度, 所有维度, 60+维度, 60多个维度,
   53个Excel, 全部工商信息, 完整企业画像, 尽调, 尽职调查.
   Also triggers on 批量查企业, 注协查询, cicpa query, audit working papers needing company background.
+slug: nigo-cicpa-company-query
+displayName: 中注协企业工商查询
+version: 1.0.0
+summary: 从中注协行业知识库查询企业工商注册信息（法人、注册资本、注册地址等），支持单个查询和全量60+维度导出。
+license: MIT
 ---
 
 # 注协系统工商信息查询
